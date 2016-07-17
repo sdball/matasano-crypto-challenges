@@ -10,9 +10,11 @@ defmodule Challenge2Test do
     assert Challenge2.fixed_xor(left, right) == expected
   end
 
-  test "byte mismatch between left and right returns an error" do
+  test "byte mismatch between left and right raises an error" do
     left  = "abcd"
     right = "abc"
-    assert {:error, _message} = Challenge2.fixed_xor(left, right)
+    assert_raise ArgumentError, fn ->
+      Challenge2.fixed_xor(left, right)
+    end
   end
 end
