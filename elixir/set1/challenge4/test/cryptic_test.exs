@@ -19,6 +19,11 @@ defmodule CrypticTest do
 
       assert Cryptic.most_likely_ascii(possible_ciphers) == actual_phrase
     end
+
+    test "when there are no printable binaries it returns an error" do
+      no_valid_ascii = [<<0>>,<<1>>,<<2>>]
+      assert Cryptic.most_likely_ascii(no_valid_ascii) == {:error, "No valid ASCII"}
+    end
   end
 
   describe "Cryptic.ascii_score/1" do

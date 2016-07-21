@@ -22,12 +22,16 @@ defmodule Cryptic do
       "FOO"
   """
   def most_likely_ascii(binaries) do
-    binaries
-    |> Enum.filter(&(String.printable?(&1)))
-    |> Enum.map(fn(possible) -> {possible, ascii_score(possible)} end)
-    |> Enum.max_by(fn({_binary, score}) -> score end)
-    |> Tuple.to_list
-    |> List.first
+    case binaries |> Enum.filter(&String.printable?/1) do
+      printable when length(printable) > 0 ->
+        printable
+        |> Enum.map(fn(possible) -> {possible, ascii_score(possible)} end)
+        |> Enum.max_by(fn({_binary, score}) -> score end)
+        |> Tuple.to_list
+        |> List.first
+      _no_printable ->
+        {:error, "No valid ASCII"}
+    end
   end
 
   @doc """
