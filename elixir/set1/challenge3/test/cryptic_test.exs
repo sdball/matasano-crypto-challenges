@@ -14,7 +14,7 @@ defmodule CrypticTest do
     test "finds the most ascii-like from a given list of strings" do
       actual_phrase = "A winner is you!"
 
-      possible_ciphers = Cryptic.all_single_hex_bytes
+      possible_ciphers = Cryptic.all_single_bytes
       |> Enum.map(fn(key) -> Cryptic.single_byte_xor(actual_phrase, key) end)
 
       assert Cryptic.most_likely_ascii(possible_ciphers) == actual_phrase

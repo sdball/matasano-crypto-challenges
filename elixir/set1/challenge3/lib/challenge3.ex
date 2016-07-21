@@ -6,7 +6,7 @@ defmodule Challenge3 do
   """
   def decipher_single_byte_xor(ciphertext) do
     ciphertext = decode_hex(ciphertext)
-    all_single_hex_bytes
+    all_single_bytes
     |> Enum.map(fn(key) -> single_byte_xor(ciphertext, key) end)
     |> most_likely_ascii
   end
