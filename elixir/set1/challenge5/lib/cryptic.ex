@@ -2,6 +2,25 @@ defmodule Cryptic do
   @all_single_bytes 0..255 |> Enum.map(&(<<&1>>))
 
   @doc """
+  Encrypt the given `plaintext` with the given `key`.
+
+  To encrypt the plaintext this function cycles through each byte of the key
+  and sequentially XORs them against the bytes of plaintext.
+
+  For example, with the plaintext `testing 123` and the key `foo`:
+
+    testing 123
+    foofoofoofo
+  """
+  def repeating_key_xor(plaintext, key) do
+    plaintext = String.trim_trailing(plaintext)
+    Stream.cycle(key |> String.split("") |> List.delete_at(-1))
+    |> Enum.take(byte_size(plaintext))
+    |> :crypto.exor(plaintext)
+    |> Base.encode16(case: :lower)
+  end
+
+  @doc """
   XOR each byte of the given binary against given byte.
   """
   def single_byte_xor(binary, key) when byte_size(key) == 1 do
