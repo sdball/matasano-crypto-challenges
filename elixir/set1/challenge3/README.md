@@ -1,24 +1,21 @@
-# Challenge3
+# Set 1 / Challenge 3
 
-**TODO: Add description**
+## Single-byte XOR cipher
 
-## Installation
+The hex encoded string:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```
+1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
+```
 
-  1. Add `challenge3` to your list of dependencies in `mix.exs`:
+... has been XOR'd against a single character. Find the key, decrypt the message.
 
-    ```elixir
-    def deps do
-      [{:challenge3, "~> 0.1.0"}]
-    end
-    ```
+You can do this by hand. But don't: write code to do it for you.
 
-  2. Ensure `challenge3` is started before your application:
+How? Devise some method for "scoring" a piece of English plaintext. Character
+frequency is a good metric. Evaluate each output and choose the one with the
+best score.
 
-    ```elixir
-    def application do
-      [applications: [:challenge3]]
-    end
-    ```
-
+>Achievement Unlocked
+>
+>You now have our permission to make "ETAOIN SHRDLU" jokes on Twitter.

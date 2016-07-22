@@ -1,24 +1,23 @@
-# Challenge2
+# Set 1 / Challenge 2
 
-**TODO: Add description**
+## Fixed XOR
 
-## Installation
+Write a function that takes two equal-length buffers and produces their XOR combination.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+If your function works properly, then when you feed it the string:
 
-  1. Add `challenge2` to your list of dependencies in `mix.exs`:
+```
+1c0111001f010100061a024b53535009181c
+```
 
-    ```elixir
-    def deps do
-      [{:challenge2, "~> 0.1.0"}]
-    end
-    ```
+... after hex decoding, and when XOR'd against:
 
-  2. Ensure `challenge2` is started before your application:
+```
+686974207468652062756c6c277320657965
+```
 
-    ```elixir
-    def application do
-      [applications: [:challenge2]]
-    end
-    ```
+... should produce:
 
+```
+746865206b696420646f6e277420706c6179
+```

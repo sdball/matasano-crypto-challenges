@@ -1,24 +1,10 @@
-# Challenge4
+# Set 1 / Challenge 4
 
-**TODO: Add description**
+## Detect single-character XOR
 
-## Installation
+One of the 60-character strings in this [file](data/4.txt) has been encrypted
+by single-character XOR.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+Find it.
 
-  1. Add `challenge4` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:challenge4, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `challenge4` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:challenge4]]
-    end
-    ```
-
+(Your code from #3 should help.)

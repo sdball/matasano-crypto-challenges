@@ -1,24 +1,21 @@
-# Challenge1
+# Set 1 / Challenge 1
 
-**TODO: Add description**
+## Convert hex to base64
 
-## Installation
+The string:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```
+49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d
+```
 
-  1. Add `challenge1` to your list of dependencies in `mix.exs`:
+Should produce:
 
-    ```elixir
-    def deps do
-      [{:challenge1, "~> 0.1.0"}]
-    end
-    ```
+```
+SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t
+```
 
-  2. Ensure `challenge1` is started before your application:
+So go ahead and make that happen. You'll need to use this code for the rest of the exercises.
 
-    ```elixir
-    def application do
-      [applications: [:challenge1]]
-    end
-    ```
-
+> Cryptopals Rule
+>
+> Always operate on raw bytes, never on encoded strings. Only use hex and base64 for pretty-printing.
