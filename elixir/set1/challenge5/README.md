@@ -1,6 +1,4 @@
-# Set 1 / Challenge 2
-
-## Implement repeating-key XOR
+# Set 1 / Challenge 5 - Implement repeating-key XOR
 
 Here is the opening stanza of an important work of the English language:
 

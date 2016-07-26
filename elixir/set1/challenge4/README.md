@@ -1,6 +1,4 @@
-# Set 1 / Challenge 4
-
-## Detect single-character XOR
+# Set 1 / Challenge 4 - Detect single-character XOR
 
 One of the 60-character strings in this [file](data/4.txt) has been encrypted
 by single-character XOR.

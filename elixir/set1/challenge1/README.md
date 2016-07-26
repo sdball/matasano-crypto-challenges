@@ -1,6 +1,4 @@
-# Set 1 / Challenge 1
-
-## Convert hex to base64
+# Set 1 / Challenge 1 - Convert hex to base64
 
 The string:
 

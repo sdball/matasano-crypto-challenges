@@ -1,6 +1,4 @@
-# Set 1 / Challenge 3
-
-## Single-byte XOR cipher
+# Set 1 / Challenge 3 - Single-byte XOR cipher
 
 The hex encoded string:
 
